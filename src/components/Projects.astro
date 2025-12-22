@@ -1,0 +1,53 @@
+---
+import { featuredProjects, allProjects } from "../data/projects";
+import ProjectCard from "./ProjectCard";
+---
+
+<section id="projects" class="section bg-[#0a0a0a]">
+    <div class="container-main">
+        <!-- Section Header -->
+        <div class="mb-12">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">
+                Production-ready applications with enterprise-grade security and
+                modern architecture
+            </p>
+        </div>
+
+        <!-- Featured Projects Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+            {
+                featuredProjects.map((project) => (
+                    <ProjectCard
+                        client:visible
+                        project={project}
+                        featured={true}
+                    />
+                ))
+            }
+        </div>
+
+        <!-- All Projects Header -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-bold text-white mb-2">More Projects</h3>
+            <p class="text-gray-400">
+                Additional work showcasing different technologies and domains
+            </p>
+        </div>
+
+        <!-- Other Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {
+                allProjects
+                    .filter((p) => !p.featured)
+                    .map((project) => (
+                        <ProjectCard
+                            client:visible
+                            project={project}
+                            featured={false}
+                        />
+                    ))
+            }
+        </div>
+    </div>
+</section>

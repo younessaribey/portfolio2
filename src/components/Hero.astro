@@ -1,0 +1,196 @@
+---
+import { personal } from "../data/personal";
+import { Mail, Linkedin, Github, FileText, ChevronDown } from "lucide-react";
+---
+
+<section
+    class="relative min-h-screen flex items-center justify-center pt-20 pb-10 overflow-hidden"
+>
+    <!-- Background gradient -->
+    <div
+        class="absolute inset-0 bg-gradient-to-b from-purple-900/10 via-transparent to-transparent pointer-events-none"
+    >
+    </div>
+
+    <!-- Content -->
+    <div class="container-main relative z-10">
+        <div class="max-w-4xl mx-auto text-center md:text-left">
+            <!-- Greeting -->
+            <p
+                class="text-purple-400 font-medium mb-4 animate-fade-in"
+                style="animation-delay: 0.1s"
+            >
+                Hi, my name is
+            </p>
+
+            <!-- Name -->
+            <h1
+                class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-slide-up"
+                style="animation-delay: 0.2s"
+            >
+                {personal.name}<span class="text-purple-500">.</span>
+            </h1>
+
+            <!-- Title -->
+            <h2
+                class="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-400 mb-6 animate-slide-up"
+                style="animation-delay: 0.3s"
+            >
+                {personal.title}
+            </h2>
+
+            <!-- Description -->
+            <p
+                class="text-base sm:text-lg md:text-xl text-gray-500 max-w-2xl mb-8 leading-relaxed animate-slide-up"
+                style="animation-delay: 0.4s"
+            >
+                {personal.description}
+            </p>
+
+            <!-- Security Badge -->
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 bg-red-900/20 border border-red-800/50 rounded-full mb-8 animate-slide-up"
+                style="animation-delay: 0.45s"
+            >
+                <svg
+                    class="w-4 h-4 text-red-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    ></path>
+                </svg>
+                <span class="text-sm font-medium text-red-400"
+                    >Security-First Development</span
+                >
+            </div>
+
+            <!-- CTA Buttons -->
+            <div
+                class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8 animate-slide-up"
+                style="animation-delay: 0.5s"
+            >
+                <a href="#projects" class="btn-primary"> View Projects </a>
+                <a href="#contact" class="btn-secondary"> Contact Me </a>
+            </div>
+
+            <!-- Social Links -->
+            <div
+                class="flex flex-wrap gap-3 justify-center md:justify-start animate-slide-up"
+                style="animation-delay: 0.6s"
+            >
+                <a
+                    href={`mailto:${personal.email}`}
+                    class="twilight-button group"
+                    title="Email"
+                >
+                    <svg
+                        class="w-5 h-5 text-gray-400 group-hover:text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        ></path>
+                    </svg>
+                    <span
+                        class="hidden sm:inline text-sm text-gray-400 group-hover:text-white"
+                        >{personal.emailDisplay}</span
+                    >
+                </a>
+
+                <a
+                    href={personal.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="twilight-button group"
+                    title="LinkedIn"
+                >
+                    <span class="font-bold text-gray-400 group-hover:text-white"
+                        >in</span
+                    >
+                    <span
+                        class="hidden sm:inline text-sm text-gray-400 group-hover:text-white"
+                        >LinkedIn</span
+                    >
+                </a>
+
+                <a
+                    href={personal.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="twilight-button group"
+                    title="GitHub"
+                >
+                    <svg
+                        class="w-5 h-5 text-gray-400 group-hover:text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                        ></path>
+                    </svg>
+                    <span
+                        class="hidden sm:inline text-sm text-gray-400 group-hover:text-white"
+                        >GitHub</span
+                    >
+                </a>
+            </div>
+
+            <!-- Resume Link -->
+            <div class="mt-6 animate-slide-up" style="animation-delay: 0.7s">
+                <a
+                    href={personal.resumeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 text-sm transition-colors group"
+                >
+                    <span>Looking for my resume?</span>
+                    <svg
+                        class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator (Mobile) -->
+    <div
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 md:hidden animate-bounce"
+    >
+        <div class="flex flex-col items-center gap-2 text-gray-500">
+            <span class="text-xs font-medium">Scroll to explore</span>
+            <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </div>
+</section>

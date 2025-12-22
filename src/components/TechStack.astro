@@ -1,0 +1,134 @@
+---
+import { techStack } from '../data/personal';
+---
+
+<section id="skills" class="section bg-[#0a0a0a]">
+  <div class="container-main">
+    <!-- Section Header -->
+    <div class="mb-12">
+      <h2 class="section-title">Technologies & Skills</h2>
+      <p class="section-subtitle">
+        Full-stack expertise across frontend, backend, security, and DevOps
+      </p>
+    </div>
+
+    <!-- Frontend -->
+    <div class="mb-10">
+      <h3 class="text-xl font-semibold text-gray-300 mb-4 flex items-center gap-2">
+        <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+        Frontend
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        {techStack.frontend.map((tech) => (
+          <div 
+            class="group relative bg-[#111111] hover:bg-[#161616] border border-gray-800 hover:border-gray-700 rounded-xl p-4 transition-all duration-300 hover:scale-105 cursor-default"
+            title={tech.usage}
+          >
+            <div class="flex items-center gap-3">
+              <div 
+                class="w-10 h-10 rounded-lg flex items-center justify-center text-2xl font-bold"
+                style={`background: ${tech.color}20; color: ${tech.color};`}
+              >
+                {tech.name[0]}
+              </div>
+              <span class="text-sm font-medium text-gray-300">{tech.name}</span>
+            </div>
+            <!-- Tooltip -->
+            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-gray-700 z-10">
+              {tech.usage}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div class="mb-10">
+      <h3 class="text-xl font-semibold text-gray-300 mb-4 flex items-center gap-2">
+        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+        Backend & Database
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        {techStack.backend.map((tech) => (
+          <div 
+            class="group relative bg-[#111111] hover:bg-[#161616] border border-gray-800 hover:border-gray-700 rounded-xl p-4 transition-all duration-300 hover:scale-105 cursor-default"
+            title={tech.usage}
+          >
+            <div class="flex items-center gap-3">
+              <div 
+                class="w-10 h-10 rounded-lg flex items-center justify-center text-2xl font-bold"
+                style={`background: ${tech.color}20; color: ${tech.color};`}
+              >
+                {tech.name[0]}
+              </div>
+              <span class="text-sm font-medium text-gray-300">{tech.name}</span>
+            </div>
+            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-gray-700 z-10">
+              {tech.usage}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Security -->
+    <div class="mb-10">
+      <h3 class="text-xl font-semibold text-gray-300 mb-4 flex items-center gap-2">
+        <span class="w-2 h-2 bg-red-500 rounded-full"></span>
+        Security
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        {techStack.security.map((tech) => (
+          <div 
+            class="group relative bg-[#111111] hover:bg-red-950/20 border border-gray-800 hover:border-red-800/50 rounded-xl p-4 transition-all duration-300 hover:scale-105 cursor-default"
+            title={tech.usage}
+          >
+            <div class="flex items-center gap-3">
+              <div 
+                class="w-10 h-10 rounded-lg flex items-center justify-center"
+                style={`background: ${tech.color}20;`}
+              >
+                <svg class="w-5 h-5" style={`color: ${tech.color};`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <span class="text-sm font-medium text-gray-300">{tech.name}</span>
+            </div>
+            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-gray-700 z-10">
+              {tech.usage}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div>
+      <h3 class="text-xl font-semibold text-gray-300 mb-4 flex items-center gap-2">
+        <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+        DevOps & Tools
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        {techStack.tools.map((tech) => (
+          <div 
+            class="group relative bg-[#111111] hover:bg-[#161616] border border-gray-800 hover:border-gray-700 rounded-xl p-4 transition-all duration-300 hover:scale-105 cursor-default"
+            title={tech.usage}
+          >
+            <div class="flex items-center gap-3">
+              <div 
+                class="w-10 h-10 rounded-lg flex items-center justify-center text-2xl font-bold"
+                style={`background: ${tech.color}20; color: ${tech.color};`}
+              >
+                {tech.name[0]}
+              </div>
+              <span class="text-sm font-medium text-gray-300">{tech.name}</span>
+            </div>
+            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-gray-700 z-10">
+              {tech.usage}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

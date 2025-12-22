@@ -1,0 +1,19 @@
+---
+import { experiences } from "../data/experience";
+import ExperienceTimeline from "./ExperienceTimeline";
+---
+
+<section id="experience" class="section bg-[#0a0a0a]">
+    <div class="container-main">
+        <!-- Section Header -->
+        <div class="mb-12">
+            <h2 class="section-title">Experience</h2>
+            <p class="section-subtitle">
+                5+ years of professional experience across fintech, e-commerce,
+                and enterprise software
+            </p>
+        </div>
+
+        <ExperienceTimeline client:visible experiences={experiences} />
+    </div>
+</section>

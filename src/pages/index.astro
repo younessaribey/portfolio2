@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import TechStackAnimated from "../components/TechStackAnimated";
+import Experience from "../components/Experience.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+	<Header />
+	<main>
+		<Hero />
+		<TechStackAnimated client:visible />
+		<Projects />
+		<Experience />
+		<Contact />
+	</main>
+	<Footer />
+</Layout>
