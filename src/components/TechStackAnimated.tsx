@@ -164,7 +164,7 @@ export default function TechStackAnimated() {
                     className="text-3xl sm:text-4xl font-bold text-white mb-12"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.3, margin: "0px 0px -50px 0px" }}
                     transition={{ duration: 0.6 }}
                 >
                     Technologies & Skills
@@ -176,7 +176,7 @@ export default function TechStackAnimated() {
                         className="text-xl sm:text-2xl font-semibold text-gray-400 mb-6"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.5, margin: "0px 0px -50px 0px" }}
                         transition={{ duration: 0.6 }}
                     >
                         Frontend
@@ -196,7 +196,7 @@ export default function TechStackAnimated() {
                         className="text-xl sm:text-2xl font-semibold text-gray-400 mb-6"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.5, margin: "0px 0px -50px 0px" }}
                         transition={{ duration: 0.6 }}
                     >
                         Backend & Database
@@ -216,7 +216,7 @@ export default function TechStackAnimated() {
                         className="text-xl sm:text-2xl font-semibold text-gray-400 mb-6 flex items-center gap-3"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.5, margin: "0px 0px -50px 0px" }}
                         transition={{ duration: 0.6 }}
                     >
                         <FaShieldAlt className="text-green-500" />
@@ -235,7 +235,7 @@ export default function TechStackAnimated() {
                         className="mt-8 p-6 md:p-8 bg-gradient-to-r from-green-900/10 to-blue-900/10 rounded-xl border border-green-800/20"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.3, margin: "0px 0px -50px 0px" }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <div className="flex items-center gap-3 mb-4">
@@ -254,7 +254,7 @@ export default function TechStackAnimated() {
                         className="text-xl sm:text-2xl font-semibold text-gray-400 mb-6"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.5, margin: "0px 0px -50px 0px" }}
                         transition={{ duration: 0.6 }}
                     >
                         Tools & DevOps

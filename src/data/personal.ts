@@ -5,6 +5,7 @@ export const personal = {
     description: "I build scalable web platforms that simplify complex operations. Specialized in enterprise e-commerce, real-time dashboards, and high-performance backend systems.",
     email: "younessaribey1@gmail.com",
     emailDisplay: "me@younessaribey.dev",
+    whatsapp: "213550335911",
     linkedin: "https://www.linkedin.com/in/younes-saribey-6178a8258/",
     github: "https://github.com/younessaribey",
     resumeUrl: "/pdf/younes.pdf",
